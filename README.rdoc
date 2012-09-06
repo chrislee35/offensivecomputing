@@ -1,6 +1,33 @@
 = offensivecomputing
 
-Description goes here.
+Rubygem for interacting with OffensiveComputing.net, a malware sharing community.  This allows for query and downloading of malware.
+
+	oc = OffensiveComputing::MalwareSearch.new(user, pass)
+	recs = oc.search("4462aae981360f73b0016d69029321b4")
+	pp recs => [#<struct OffensiveComputing::MalwareResult
+	  md5="4462aae981360f73b0016d69029321b4",
+	  sha1="f8229be77c429c84f4c612a4f106bc54a96a8733",
+	  sha256="f951deff6086a1e68f0d09bd3856f1c1af5c117590443ea05d171a75969bbb63",
+	  filename="4462aae981360f73b0016d69029321b4.EXE",
+	  added=Sat May 26 17:38:23 UTC 2007,
+	  magic="MZ executable for MS-DOS",
+	  packer=nil,
+	  avresults=
+	   [#<struct OffensiveComputing::AVResult
+	     name="ClamAV",
+	     signature="VGEN.735.3">,
+	    #<struct OffensiveComputing::AVResult
+	     name="BitDefender",
+	     signature="GenDropper.MutaGen">,
+	    #<struct OffensiveComputing::AVResult
+	     name="Kaspersky",
+	     signature="Virus.DOS.MutaGen.100.Test.1325">,
+	    #<struct OffensiveComputing::AVResult
+	     name="AVGScan",
+	     signature="Virus found Mutagen">],
+	  tags=nil,
+	  dlurl="download.php?id=1...7&auth=9...e">]
+
 
 == Contributing to offensivecomputing
  

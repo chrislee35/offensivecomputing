@@ -1,0 +1,1 @@
+require 'offensivecomputing/offensivecomputing'
